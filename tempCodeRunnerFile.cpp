@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-    #ifndef ONLINE_JUDGE
-        freopen("input.txt","r", stdin);
-        freopen("output.txt","w",stdout);
-    #endif
-    int a,b;  
+long calpushups(vector<int> protein){
+    long ans = 0;
+    sort(protein.begin(), protein.end(), greater<int>());
+    for(int i = 0; i < protein.size(); i++){
+        long mul = pow(3, i);
